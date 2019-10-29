@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Twitler </title>
+    <link rel="stylesheet" type="text/css" href="cssFile.css">
+    <script src="jquery.js"></script>
+    <script src="data_generator.js"></script>
+  </head>
+  <body>
+   <header id='hh'></header>
+   
+    <script>
+
+      $(document).ready(function(){
+        var $body = $('body');
+        $body.html('');
+        $body.append('<div id="j"></div>')
+          $body.append('<div id="i"></div>')
+        
+        $( '<header> <img src="http://nrcpublicblog.files.wordpress.com/2011/08/twitter_logo_withbird_black.png"> </header>'  ).insertAfter( 'head' )
+                $("#j").append(' <button>add</button>');
+        $("button").click(function(){
+          var index2 = streams.home.length - 1;
+          var tweet2 = streams.home[index2];
+          var $tweet2 = $('<div></div>');
+          while(index2 >= 0) {
+          $tweet2.text(  tweet2.created_at + '@' + tweet2.user + ': ' + tweet2.message);
+          $('#i').prepend($tweet2);
+          index2 -= 1;
+        //remove function should be here ! whenever we press the add button the last sentence will be removed 
+
+        }
+});
+
+        var index = streams.home.length - 1;
+        while(index >= 0){
+          var tweet = streams.home[index];
+          var $tweet = $('<div></div>');
+          var button = $('button')
+          $tweet.text(  tweet.created_at + '@' + tweet.user + ': ' + tweet.message);
+          $tweet.appendTo($body);
+
+          index -= 1;
+        }
+
+
+
+
+$("body").append(" <div></div><div></div><div></div>")
+      });
+      
+
+
+    
+    </script>
+  </body>
+</html>

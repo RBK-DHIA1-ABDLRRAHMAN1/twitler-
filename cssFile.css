@@ -1,0 +1,26 @@
+body {
+	background:  #99FFFF;
+	border: 2px dotted;
+	border: 0.5rem ;
+  	outline: 0.5rem ;
+  	box-shadow: 0 0 0 2rem skyblue;
+  	border-radius: 5px;
+  	font: bold 1.1rem sans-serif;
+  	margin: 2rem;
+  	padding: 1rem;
+  	outline-offset: 0.5rem;
+
+}
+
+img{
+	margin-left:  1.5%;
+
+	width: 1500px   ;
+	height: 200px ; 
+}
+div {
+  color: black;
+  }
+  button {
+  	padding-top: 0px
+  }
